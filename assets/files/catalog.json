@@ -1,0 +1,53 @@
+{
+
+    "products":[
+{
+    "id": 1,
+    "name": "Iphone 11 pro",
+    "desc": "Apple Iphone 11th generation",
+    "price": 999,
+    "color": "#33505a",
+    "image":
+        "https://skyphonez.com.au/wp-content/uploads/2019/09/iPhone_11_Pro_Max_all_5up-1.png"
+} ,
+{
+    "id": 2,
+    "name": "Pixel 5",
+    "desc": "Google Pixel phone 5th generation",
+    "price": 549,
+    "color": "#33505a",
+    "image":
+        "https://www.androidcentral.com/sites/androidcentral.com/files/styles/large/public/article_images/2020/09/google-pixel-5-render.png"
+
+},
+{"id": 3,
+    "name": "Iphone 12 pro",
+    "desc": "Apple Iphone 12th generation",
+    "price": 500,
+    "color": "#33505a",
+    "image":
+        "https://media1.popsugar-assets.com/files/thumbor/JhWnT0vhNmv7Ie6CxCThVmAaBGo/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2020/10/13/960/n/1922507/9b46ae508c936f82_iPhone_12_Pro_Max_iPhone_12_Pro_pacific_blue/i/iPhone-12-Pro-Max.png"
+    },{
+        "id": 4,
+    "name": "Ipad pro",
+    "desc": "Apple Ipad pro 2020 edition",
+    "price": 500,
+    "color": "#33505a",
+    "image":
+        "https://www.pngarea.com/pngm/171/8551806_ipad-png-transparent-ipad-pro-11-inch-hd.png"
+    },
+    
+    {
+        "id": 5,
+        "name": "M1 Macbook Air",
+        "desc": "Apple Macbook Air",
+        "price": 1000,
+        "color": "#33505a",
+        "image":
+        "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP825/macbookair.png"
+    }
+]
+
+
+
+}
