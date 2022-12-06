@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:shopking/models/cart.dart';
 import 'package:shopking/models/catalog.dart';
 import 'package:shopking/pages/home_detail_page.dart';
 import 'package:shopking/widgets/drawer.dart';
@@ -156,16 +157,7 @@ class CatalogItem extends StatelessWidget {
                       .xl2
                       .make()
                       .pOnly(top: 13),
-                  ElevatedButton(
-                    onPressed: () {},
-                    child: "Buy".text.make(),
-                    style: ButtonStyle(
-                      shape: MaterialStateProperty.all(StadiumBorder()),
-                      backgroundColor: MaterialStateProperty.all(
-                        context.theme.buttonColor,
-                      ),
-                    ),
-                  ).pOnly(top: 10).pOnly(right: 20)
+                  _AddToCart(catalog: catalog).pOnly(top: 10).pOnly(right: 20)
                 ],
               )
             ],
@@ -173,5 +165,40 @@ class CatalogItem extends StatelessWidget {
         ],
       ),
     ).color(context.theme.shadowColor).rounded.square(120).make().py16();
+  }
+}
+
+class _AddToCart extends StatefulWidget {
+  final Item catalog;
+  const _AddToCart({
+    Key? key,
+    required this.catalog,
+  }) : super(key: key);
+
+  @override
+  __AddToCartState createState() => __AddToCartState();
+}
+
+class __AddToCartState extends State<_AddToCart> {
+  bool isAdded = false;
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+        isAdded = isAdded.toggle();
+        final _catalog = CatalogModel();
+        final _cart = CartModel();
+        _cart.catalog = _catalog;
+        _cart.add(widget.catalog);
+        setState(() {});
+      },
+      child: isAdded ? Icon(Icons.done) : "Buy".text.make(),
+      style: ButtonStyle(
+        shape: MaterialStateProperty.all(StadiumBorder()),
+        backgroundColor: MaterialStateProperty.all(
+          context.theme.buttonColor,
+        ),
+      ),
+    );
   }
 }

@@ -1,11 +1,26 @@
 class CatalogModel {
+  static final catModel = CatalogModel.internal();
+
+  Null orElse;
+  CatalogModel.internal();
+
+  factory CatalogModel() => catModel;
+
   static List<Item> products = [];
 
-  int itemCount = products.length;
+  var items;
+
+  //Get item by ID
+  Item getbyId(int id) =>
+      items.firstWhere((element) => element.id = id, orElse = null);
+
+  Item getbyposition(int pos) => products[pos];
+
+  //getbyId(int id) {}
 }
 
 class Item {
-  final int id;
+  late final int id;
   final String name;
   final String desc;
   final num price;

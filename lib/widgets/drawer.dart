@@ -1,7 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'themes.dart';
-import 'package:shopking/pages/home_page.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class MyDrawer extends StatelessWidget {

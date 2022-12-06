@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:shopking/models/catalog.dart';
-import 'package:shopking/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class HomeDetailPage extends StatelessWidget {
@@ -48,7 +47,7 @@ class HomeDetailPage extends StatelessWidget {
             ),
             Expanded(
               child: VxArc(
-                height: 50,
+                height: 30,
                 arcType: VxArcType.CONVEY,
                 edge: VxEdge.TOP,
                 child: Container(
